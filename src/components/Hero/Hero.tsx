@@ -1,33 +1,23 @@
-import "./Hero.css";
-import heroImg from "../../assets/hero1.png"; // apni image yahan use karo
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-container">
-        
-        {/* LEFT CONTENT */}
-        <div className="hero-left">
-          <p className="hero-subtitle">Welcome to Ampliskill</p>
+      <div className="container">
+        <h1>
+          Amplify Your Skills <br />
+          <span>Accelerate Your Career</span>
+        </h1>
 
-          <h1 className="hero-title">
-            A world-class education is applicable for building the future
-          </h1>
+        <p>Industry-aligned programs with mentorship.</p>
 
-          <button className="hero-btn">Check events →</button>
+        <div className="hero-cta">
+          <button className="btn btn--primary">Explore Courses</button>
 
-          <div className="hero-links">
-            <span>Explore our courses →</span>
-            <span>Study Online →</span>
-          </div>
+          <button className="btn btn--ghost">
+            Free Counseling <FontAwesomeIcon icon="arrow-right" />
+          </button>
         </div>
-
-        {/* RIGHT IMAGE */}
-        <div className="hero-right">
-          <div className="image-bg"></div>
-          <img src={heroImg} alt="students" />
-        </div>
-
       </div>
     </section>
   );

@@ -1,4 +1,9 @@
 /* Reset (very important for full width) */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +19,8 @@
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -49,7 +54,8 @@ body {
 }
 
 /* Headings */
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading);
   color: var(--text-h);
 }
