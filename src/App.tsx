@@ -1,4 +1,5 @@
 import Navbar from "./layout/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 import './App.css'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       {/* Navbar yahan show hoga */}
       <Navbar />
+       <Hero />
 
       {/* Baaki content */}
       <h1>My Website</h1>
