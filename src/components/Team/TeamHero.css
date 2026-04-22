@@ -1,0 +1,104 @@
+.team-hero-container {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Text */
+.team-hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.team-hero-text p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #cbd5f5;
+}
+
+.team-hero-text button {
+  background: #3b82f6;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.team-hero-text button:hover {
+  background: #2563eb;
+}
+
+/* Image Layout */
+.team-hero-images {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common */
+.img {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Big Left */
+.img1 {
+  width: 280px;
+  height: 180px;
+  left: 20%;
+  background: #a78bfa;
+}
+
+/* Big Right */
+.img2 {
+  width: 220px;
+  height: 260px;
+  right: 20%;
+  background: #facc15;
+}
+
+/* Small Left */
+.img3 {
+  width: 120px;
+  height: 120px;
+  left: 10%;
+  top: 40px;
+  border-radius: 20px;
+}
+
+/* Small Right */
+.img4 {
+  width: 120px;
+  height: 120px;
+  right: 10%;
+  top: 20px;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-hero-images {
+    position: static;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .img {
+    position: static;
+    width: 140px !important;
+    height: 140px !important;
+  }
+}
