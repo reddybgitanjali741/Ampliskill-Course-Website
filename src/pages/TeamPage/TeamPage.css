@@ -1,0 +1,167 @@
+/* ================= WRAPPER ================= */
+.tp-container {
+  font-family: Arial, sans-serif;
+}
+
+/* ================= HERO CLEAN ================= */
+.tp-hero-clean {
+  padding: 60px 40px;
+  
+}
+
+.tp-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT */
+.tp-hero-left {
+  flex: 1;
+  animation: tpFadeLeft 1s ease;
+}
+
+.tp-hero-left h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.tp-hero-left p {
+  color: #555;
+  max-width: 400px;
+}
+
+/* BUTTON */
+.tp-btn-clean {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.tp-hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: tpFadeRight 1s ease;
+}
+
+.tp-hero-right img {
+  width: 80%;
+  max-width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  padding-top: 50px;
+}
+
+/* ================= TEAM ================= */
+.tp-team {
+  padding: 70px 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.tp-team h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* FILTERS */
+.tp-filters span {
+  padding: 8px 15px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.tp-filters .active {
+  background: #22c55e;
+  color: #fff;
+}
+
+/* GRID */
+.tp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.tp-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tp-card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.tp-card h3 {
+  margin-top: 10px;
+}
+
+.tp-card p {
+  font-size: 13px;
+  color: gray;
+}
+
+/* ICONS */
+.tp-icons span {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes tpFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tpFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .tp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tp-hero-inner {
+    flex-direction: column;
+  }
+
+  .tp-hero-left h1 {
+    font-size: 24px;
+  }
+
+  .tp-grid {
+    grid-template-columns: 1fr;
+  }
+}

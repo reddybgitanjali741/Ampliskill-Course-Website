@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* =========================
+   BODY WITH FULL BACKGROUND
+========================= */
+@layer base {
+   body {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    color: var(--foreground);
+
+    /* ✅ CORRECT PATH */
+    background: url("/src/assets/bacg.png") no-repeat center/cover fixed;
+
+    min-height: 100vh;
+  }
+}
+
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0 0);
+
+  --blue: #0057ff;
+  --blue-dark: #003fcc;
+  --navy: #1a2744;
+  --white: #ffffff;
+  --slate: #64748b;
+  --green: #10b981;
+
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --border: oklch(0.269 0 0);
+}
+
+/* =========================
+   GLOBAL ELEMENTS
+========================= */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn--primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--blue-dark);
+}
+
+.btn--ghost {
+  color: var(--navy);
+}
+
+.btn--ghost:hover {
+  color: var(--blue);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: transparent; /* ✅ FIXED */
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.hamburger {
+  display: none;
+  font-size: 20px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+  background: transparent; /* ✅ FIXED */
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero span {
+  color: var(--blue);
+}
+
+.hero p {
+  color: var(--slate);
+  margin-bottom: 20px;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* =========================
+   STATS
+========================= */
+.stats-bar {
+  background: transparent; /* ✅ FIXED */
+  padding: 40px 0;
+}
+
+.stats-bar .container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stats-bar h2 {
+  font-size: 28px;
+}
+
+.stats-bar p {
+  color: var(--slate);
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq {
+  padding: 60px 20px;
+}
+
+.faq h3 {
+  cursor: pointer;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2); /* slight glass effect */
+  margin-bottom: 6px;
+}
+
+.faq p {
+  padding: 10px;
+  color: var(--slate);
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 22px;
+}
+
+/* =========================
+   ICON FIX
+========================= */
+svg {
+  margin-left: 6px;
+}
+
+.course-rating svg {
+  color: #f59e0b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(255,255,255,0.9);
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .stats-bar .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
